@@ -40,5 +40,5 @@ A sample rewind video of the advertisement that was put by the advertisers that 
 
 ![A sample gif from datas.json](https://github.com/markakisdong/VideoTemplateCreator/blob/master/sample.gif)
 
-### Acknowledgement
+### Acknowledgement:
 Meichu Hackathon 2016 Tagtoo Team 4.
