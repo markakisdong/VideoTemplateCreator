@@ -7,8 +7,8 @@ def pil_adprocess(ad):
 
     bg_w, bg_h = bg.size
     img_w, img_h = ad.size
+    # where to put the image on the background
     offset = ((bg_w - img_w) / 2, (bg_h - img_h) / 2)
-
     bg.paste(ad, offset)
 
     return bg
