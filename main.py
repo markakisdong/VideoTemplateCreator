@@ -32,18 +32,17 @@ def tagclip(taglist):
 
 def readAds(adsjson):
     # the adsjson looks like this:
-    # { 'data': [
-    #     {
-    #       'url': 'https://....',
-    #       'tag': 0
-    #     },
-    #     ...
-    #     {
-    #       'url': 'https://....',
-    #       'tag': 1
-    #     }
-    #   ]
-    # }
+    # [  
+    #   {
+    #     'url': 'https://....',
+    #     'tag': 0
+    #   },
+    #   ...
+    #   {
+    #     'url': 'https://....',
+    #     'tag': 1
+    #   }
+    # ]
     img_list = []
     for i in range(10):
         img = cStringIO.StringIO(urllib.urlopen(adsjson[i]['url']).read())

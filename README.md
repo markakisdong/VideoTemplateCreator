@@ -19,19 +19,17 @@ run(jsonfile)
 ### Input format:
 Simple JSON:
 ```
-{
-  'data': [
-    {
-      'url': '#image_url_here',
-      'tag': #tag_number
-    },
-    {
-      'url': '#image_url_here',
-      'tag': #tag_number
-    },
-    ...
-  ]
-}
+[
+  {
+    'url': '#image_url_here',
+    'tag': #tag_number
+  },
+  {
+    'url': '#image_url_here',
+    'tag': #tag_number
+  },
+  ...
+]
 ```
 
 ### Output format:
