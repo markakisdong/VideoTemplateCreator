@@ -52,7 +52,6 @@ def intro(duration):
 def run(adsjson):
     #adsjson = 'datas.json'
     img_list = readAds(adsjson)
-    pdb.set_trace()
     good_imgs = []
     for i in img_list:
         gi = pil_adprocess(i['data'])
@@ -61,7 +60,7 @@ def run(adsjson):
 
     _INTRO_DURATION = 4
     _ADS_DURATION = 10
-    _TEXT_DURATION = 14
+    _TEXT_DURATION = 15
     _END_DURATION = 4
     _DURATION = _INTRO_DURATION + _ADS_DURATION + _TEXT_DURATION + _END_DURATION
 
@@ -89,7 +88,7 @@ def run(adsjson):
     tag0clips = tagclip(tag0)
     tag1textclip = simpleTextClip('We got cheaper ones!', 50, 'center', 3.5, ef_vortex)
     tag1clips = tagclip(tag1)
-    tag2textclip = simpleTextClip('ON A DISCOUNT', 50, 'center', 3.5, ef_arrive)
+    tag2textclip = simpleTextClip('87/100 Interested', 50, 'center', 4.5, ef_arrive)
     tag2clips = tagclip(tag2)
     tag3textclip = simpleTextClip('Thank you for these', 50, 'center', 4, ef_vortex)
     tag3clips = tagclip(tag3)
@@ -101,7 +100,6 @@ def run(adsjson):
     # Bye clip
     byeclip = fadeout(simpleTextClip('SEE YA', 50, 'center', _END_DURATION, ef_vortex), duration=_END_DURATION)
     concat_clip = [intro_clip] + fulltagclips + [byeclip]
-    #pdb.set_trace()
 
     # concatenate all the clips
     final = concatenate_videoclips(concat_clip)
@@ -112,4 +110,6 @@ def run(adsjson):
     final.write_videofile("holy.avi", fps=25, codec="mpeg4")
 
 if __name__ == '__main__':
-    main()
+    with open('datas.json', 'r') as f:
+        adsjson = json.load(f)
+    run(adsjson)
