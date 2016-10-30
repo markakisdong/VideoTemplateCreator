@@ -35,8 +35,8 @@ Simple JSON:
 ```
 
 ### Output format:
-A sample rewind video of the advertisement that was put by the advertisers that wants to suck your money. Take a look.
-(Parsed from datas.json. Download holy.mp4 with audio and high fps)
+A sample rewind video of the advertisement that was put by the advertisers that wants to suck your money. Take a look.<br>
+(Parsed from datas.json. Download holy.mp4 with audio and high fps, below is a sample gif)
 
 ![A sample gif from datas.json](https://github.com/markakisdong/VideoTemplateCreator/blob/master/sample.gif)
 
