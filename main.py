@@ -30,13 +30,13 @@ def tagclip(taglist):
     return cliplist
 
 def readAds(adsjson):
-    with open(adsjson, 'r') as f:
-        ads_list = json.load(f)
+    # with open(adsjson, 'r') as f:
+    #     ads_list = json.load(f)
 
     img_list = []
     for i in range(10):
-        img = cStringIO.StringIO(urllib.urlopen(ads_list[i]['url']).read())
-        img_dict = {'data': Image.open(img), 'tag': ads_list[i]['tag']}
+        img = cStringIO.StringIO(urllib.urlopen(adsjson[i]['url']).read())
+        img_dict = {'data': Image.open(img), 'tag': adsjson[i]['tag']}
         img_list.append(img_dict)
 
     return img_list
@@ -49,9 +49,10 @@ def intro(duration):
 
     return txt_clip, maskclip
 
-def main():
-    adsjson = 'datas.json'
+def run(adsjson):
+    #adsjson = 'datas.json'
     img_list = readAds(adsjson)
+    pdb.set_trace()
     good_imgs = []
     for i in img_list:
         gi = pil_adprocess(i['data'])
