@@ -18,7 +18,7 @@ run(jsonfile)
 
 ### Input format:
 Simple JSON:
-```JSON
+```
 {
   'data': [
     {
