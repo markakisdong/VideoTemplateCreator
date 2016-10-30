@@ -107,7 +107,8 @@ def run(adsjson):
     audio = audio_fadeout(AudioFileClip("sources/facebook.mp3").subclip(0, _DURATION), duration=4)
     final = final.set_audio(audio)
     # Write the result to a file (many options available !)
-    final.write_videofile("holy.avi", fps=25, codec="mpeg4")
+    final.write_videofile("holy.mp4", fps=24, codec='libx264', audio_codec='aac',\
+                            temp_audiofile='bgTMP.m4a', remove_temp=True)
 
 if __name__ == '__main__':
     with open('datas.json', 'r') as f:
