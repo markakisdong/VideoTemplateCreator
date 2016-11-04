@@ -5,6 +5,12 @@ Generate a Facebook-rewind-like video with given advertisement image from the JS
 
 This is an advertisement rewind video generator, the advertisements are split into 4 tags. Tag 0 means the advertisement was not seen by the user, the product/item was not purchased by the user either. Tag 1 means the advertisement was not seen by the user, but the user actually purchased the product/item the advertisement trying to show. Tag 2 means the advertisement was seen by the user, but the user did not pay further attention. Tag 3 means the advertisement was successfully merchandised to the user and made profit from the user.
 
+### System Requirement:
+Required system-wide packages: ```imagemagick, cairo (sudo apt install or brew install will do)```. Please refer to [moviepy download/install page](https://zulko.github.io/moviepy/install.html) for more information. Install other dependencies by:<br>
+```bash
+pip install -r req.txt
+```
+
 ### How to run:
 Simple python (with datas.json as input, change it in bottom of main.py):
 ```python
